@@ -12,9 +12,9 @@
     nightDayHandler(this);
   ">
   <ol>
-    <li><a onclick="fetchPage('html')">HTML</a></li>
-    <li><a onclick="fetchPage('css')">CSS</a></li>
-    <li><a onclick="fetchPage('javascipt')">JavaScript</a></li>
+    <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+    <li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
+    <li><a href="#!javascript" onclick="fetchPage('javascipt')">JavaScript</a></li>
   </ol>
   <article>
 
@@ -28,6 +28,7 @@
         })
       })
     }
+    location.hash ? fetchPage(location.hash.substr(2)) : fetchPage('welcome');
   </script>
 </body>
 </html>
